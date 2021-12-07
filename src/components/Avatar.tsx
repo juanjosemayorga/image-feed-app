@@ -17,12 +17,18 @@ export const Avatar = ({ size, initials, backgroundColor}: AvatarProps) => {
   }
 
   return (
-    <View style={style}>
-      
+    <View style={[styles.container, style]}>
+      <Text style={styles.text}>{initials}</Text>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text: {
+    color: '#fff',
+  }
 })
