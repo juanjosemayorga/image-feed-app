@@ -22,7 +22,11 @@ export const AuthorRow = ({ fullName, linkText, onPressLinkText }: AuthorRowProp
       <Text style={styles.text} numberOfLines={1}>
         {fullName}
       </Text>
-      {/* ... */}
+      {!!linkText && (
+        <TouchableOpacity onPress={onPressLinkText}>
+          <Text style={styles.textLink} numberOfLines={1}>{linkText}</Text>
+        </TouchableOpacity>
+      )}
     </View>
   )
 }
@@ -37,5 +41,9 @@ const styles = StyleSheet.create({
   text: {
     flex: 1,
     marginHorizontal: 6,
+    color: '#000',
   },
+  textLink: {
+    color: '#000',
+  }
 });

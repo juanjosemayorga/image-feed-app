@@ -1,15 +1,17 @@
 import React from 'react'
 import {getStatusBarHeight} from 'react-native-status-bar-height';
-import { StyleSheet, Text, View } from 'react-native'
-import { Avatar } from './src/components/Avatar';
+import { StyleSheet, View } from 'react-native'
+import { Card } from './src/components/Card';
 
 const App = () => {
-
-  console.log('This is the height: ', getStatusBarHeight());
-
   return (
     <View style={styles.container}>
-      <Avatar initials={'FL'} size={35} backgroundColor={'teal'} />
+      <Card
+        fullName={'Juan Jose Mayorga'}
+        linkText={'Comments'}
+        onPressLinkText={() => console.log('Pressed link!')}
+        image={{ uri: 'https://unsplash.it/600/600' }}
+      />
     </View>
   );
 }
