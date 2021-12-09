@@ -10,8 +10,8 @@ type ImageType = {
 interface CardProps {
   fullName: string;
   image: ImageType;
-  linkText: string;
-  onPressLinkText: () => void;
+  linkText?: string;
+  onPressLinkText?: () => void;
 }
 
 const initialState = {

@@ -2,16 +2,17 @@ import React from 'react'
 import {getStatusBarHeight} from 'react-native-status-bar-height';
 import { StyleSheet, View } from 'react-native'
 import { Card } from './src/components/Card';
+import { CardList } from './src/components/CardList';
+
+const items = [
+  {id: 0, author: 'Bob Ross'},
+  {id: 1, author: 'Chuck Norris'},
+];
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Card
-        fullName={'Juan Jose Mayorga'}
-        linkText={'Comments'}
-        onPressLinkText={() => console.log('Pressed link!')}
-        image={{ uri: 'https://unsplash.it/600/600' }}
-      />
+      <CardList items={items} />
     </View>
   );
 }
