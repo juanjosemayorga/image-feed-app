@@ -4,6 +4,7 @@ import { Platform, StyleSheet, View } from 'react-native'
 import { Card } from './src/components/Card';
 import { CardList } from './src/components/CardList';
 import { Feed } from './src/screens/Feed';
+import { CommentInput } from './src/components/CommentInput';
 
 const items = [
   {id: 0, author: 'Bob Ross'},
