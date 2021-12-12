@@ -5,7 +5,9 @@ import { CardList } from '../components/CardList'
 import { fetchImages } from '../utils/api'
 
 interface FeedPropTypes {
-  style: object | null,
+  style: object | null;
+  commentsForItem: string[];
+  onPressComments: (id: number) => void;
 }
 
 interface FeedState {
@@ -20,7 +22,11 @@ const initialState: FeedState = {
   items: [],
 }
 
-export const Feed = ({ style = null }: FeedPropTypes) => {
+export const Feed = ({
+  style = null,
+  commentsForItem,
+  onPressComments
+}: FeedPropTypes) => {
 
   const [{ loading, error, items }, setState] = useState(initialState)
 
@@ -55,7 +61,10 @@ export const Feed = ({ style = null }: FeedPropTypes) => {
 
   return (
     <SafeAreaView style={style}>
-      <CardList items={items} />
+      <CardList
+        commentsForItem={commentsForItem}
+        onPressComments={onPressComments}
+        items={items} />
     </SafeAreaView>
   )
 }

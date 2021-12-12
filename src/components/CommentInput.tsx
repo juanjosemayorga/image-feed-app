@@ -37,6 +37,7 @@ export const CommentInput = ({
         underlineColorAndroid="transparent"
         onChangeText={handleChangeText}
         onSubmitEditing={handleSubmitEditing}
+        placeholderTextColor="grey"
       />
     </View>
   );
@@ -51,5 +52,6 @@ const styles = StyleSheet.create({
   },
   input: {
     flex: 1,
+    color: '#000',
   },
 });

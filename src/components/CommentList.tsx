@@ -10,7 +10,7 @@ export const CommentList = ({ items }: CommentListProps) => {
   const renderItem = (item: string, index: number) => {
     return (
       <View key={index} style={styles.comment}>
-        <Text>{item}</Text>
+        <Text style={styles.text}>{item}</Text>
       </View>
     )
   }
@@ -30,4 +30,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: 'rgba(0,0,0,0.05)',
   },
+  text: {
+    color: '#000',
+  }
 });

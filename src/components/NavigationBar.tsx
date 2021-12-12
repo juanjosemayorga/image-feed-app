@@ -15,7 +15,7 @@ export const NavigationBar = ({
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.leftText} onPress={onPressLeftText}>
-        <Text>{leftText}</Text>
+        <Text style={styles.letfText}>{leftText}</Text>
       </TouchableOpacity>
       <Text style={styles.title}>{title}</Text>
     </View>
@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontWeight: '500',
+    color: '#000',
   },
   leftText: {
     position: 'absolute',
@@ -39,5 +40,9 @@ const styles = StyleSheet.create({
     top: 0,
     bottom: 0,
     justifyContent: 'center',
+    color: '#000',
   },
+  letfText: {
+    color: '#000',
+  }
 });
